@@ -1,0 +1,84 @@
+= GraniteDS Remoting Tutorial
+
+This tutorial shows how to build a simple client/server Hello World application where the client and server communicate
+using GraniteDS remoting.
+
+== How to use this tutorial
+
+GraniteDS integrates various client and server technologies, thus its actual use somehow depends on which of 
+these technologies you will be using.
+This tutorial includes most of the combinations supported by GraniteDS, so first you will have to build and
+generate the documentation for your technologies of choice.
+
+You will need a few tools to use this tutorial:
+
+- A Git client (http://git-scm.com/downloads[download here]),
+- JDK 7 (http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html[download here]),
+- Maven 3 (http://maven.apache.org/download.cgi[download here]).
+
+The first step is to clone this git repository from the command line:
+
+----
+git clone http://github.com/graniteds-tutorials/graniteds-tutorial-helloworld.git
+----
+
+Next +cd+ in the tutorial folder and build the project and tutorial document (see next section for other options):
+
+----
+cd graniteds-tutorial-helloworld
+
+mvn clean install asciidoctor:process-asciidoc -Dserver=spring -Dclient=java
+----
+
+Finally, each time you launch one of the above build, a dedicated documentation is generated in
++target/docs/graniteds-tutorial-helloworld.html+. Refer to this document to know how to run the sample application
+and how its source code is designed.
+
+== Available Server / Client Configurations
+
+The available options for the server are:
+
+* spring
+* ejb
+* cdi
+
+The available options for the client are:
+
+* java
+* javafx
+* flex
+* air
+
+All available builds for this tutorial are listed below:
+
+===== Headless Java Client (command line)
+
+----
+mvn clean install asciidoctor:process-asciidoc -Dserver=spring -Dclient=java
+mvn clean install asciidoctor:process-asciidoc -Dserver=ejb -Dclient=java
+mvn clean install asciidoctor:process-asciidoc -Dserver=cdi -Dclient=java
+----
+
+===== JavaFX Client
+
+----
+mvn clean install asciidoctor:process-asciidoc -Dserver=spring -Dclient=javafx
+mvn clean install asciidoctor:process-asciidoc -Dserver=ejb -Dclient=javafx
+mvn clean install asciidoctor:process-asciidoc -Dserver=cdi -Dclient=javafx
+----
+
+===== Flex Client
+
+----
+mvn clean install asciidoctor:process-asciidoc -Dserver=spring -Dclient=flex
+mvn clean install asciidoctor:process-asciidoc -Dserver=ejb -Dclient=flex
+mvn clean install asciidoctor:process-asciidoc -Dserver=cdi -Dclient=flex
+----
+
+===== Air Client
+
+----
+mvn clean install asciidoctor:process-asciidoc -Dserver=spring -Dclient=air
+mvn clean install asciidoctor:process-asciidoc -Dserver=ejb -Dclient=air
+mvn clean install asciidoctor:process-asciidoc -Dserver=cdi -Dclient=air
+----

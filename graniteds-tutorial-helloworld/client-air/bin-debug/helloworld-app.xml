@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/3.1">
+    <id>org.graniteds.tutorial.helloworld</id>
+    <filename>helloworld</filename>
+    <name>GraniteDS Remoting Tutorial</name>
+    <versionNumber>3.1.0</versionNumber>
+	
+    <initialWindow>
+        <title>GraniteDS Remoting Tutorial</title>
+        <content>helloworld.swf</content>
+        <width>400</width>
+        <height>155</height>
+        <visible>true</visible>
+    </initialWindow>
+</application>
